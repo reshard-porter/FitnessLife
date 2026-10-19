@@ -1,0 +1,11 @@
+{
+  "appId": "com.example.fitnesslife",
+  "appName": "FitnessLife",
+  "webDir": "www",
+  "backgroundColor": "#1A2636",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#1A2636",
+    "allowsLinkPreview": false
+  }
+}
