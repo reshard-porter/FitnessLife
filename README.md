@@ -60,6 +60,11 @@ npm run sync       # rebuilds www/ and copies it into the iOS project
 
 Then press Run in Xcode again. `npm run build` only rebuilds `www/` without touching the iOS project.
 
+## Troubleshooting the build
+
+- **"capacitor.config.json / config.xml / public couldn't be opened because there is no such file"**: the generated web files are missing from `ios/App/App/`. Pull the latest version of this repo (they are now committed), or run `npm install && npm run sync`.
+- **"Command Ld failed with a nonzero exit code"** right after those errors: clear the stale build with **Product → Clean Build Folder** (⇧⌘K), then **File → Packages → Reset Package Caches**, and press Run again. If it still fails, open the Report navigator (⌘9), click the failed build and copy the lines above "Ld failed" (usually "Undefined symbol …"); they name the real cause.
+
 ## Icon and launch screen
 
 - App icon: `ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png` (1024 × 1024, no transparency)
